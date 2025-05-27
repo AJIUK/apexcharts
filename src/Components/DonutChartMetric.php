@@ -25,6 +25,12 @@ class DonutChartMetric extends Metric
         ];
     }
 
+    public function withoutWrapper(): static
+    {
+        $this->view = 'moonshine-apexcharts::components.metrics.donut';
+        return $this;
+    }
+
     public function getDecimals(): int
     {
         return $this->decimals;
